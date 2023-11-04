@@ -54,14 +54,15 @@ public class DbConnection {
                     "CREATE TABLE IF NOT EXISTS todo (" +
                     "id INT NOT NULL AUTO_INCREMENT," +
                     "todo VARCHAR(255)," +
+                    "image blob,"+
                     "userId INT," +
                     "PRIMARY KEY(id)," +
                     "FOREIGN KEY (userId) REFERENCES auth(id)"+
                     ")");
-            con.createStatement().executeUpdate("" +
-                    "INSERT INTO todo (todo, userId) VALUES" +
-                    "('ab',1);" +
-                    "");
+//            con.createStatement().executeUpdate("" +
+//                    "INSERT INTO todo (todo, userId) VALUES" +
+//                    "('ab',1);" +
+//                    "");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

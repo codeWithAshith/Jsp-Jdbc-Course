@@ -1,10 +1,21 @@
 package com.codewithashith.model;
 
+import java.io.File;
+import java.sql.Blob;
+
 public class Todo {
 
     private int id;
     private int userId;
     private String todo;
+    private String base64Image;
+    public String getBase64Image() {
+        return base64Image;
+    }
+
+    public void setBase64Image(String base64Image) {
+        this.base64Image = base64Image;
+    }
 
     public int getId() {
         return id;
